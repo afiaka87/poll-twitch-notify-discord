@@ -48,9 +48,9 @@ class DiscordBot(discord.Client):
             )
             return
 
-        guild = self.get_guild(GUILD_ID)
+        guild = await self.fetch_guild(GUILD_ID)
         if guild:
-            channel = guild.get_channel(CHANNEL_ID)
+            channel = await guild.fetch_channel(CHANNEL_ID)
             if isinstance(channel, TextChannel):
                 message = f"{username} has started streaming at {TwitchAPI.get_stream_url(username)}"
                 await channel.send(message)
