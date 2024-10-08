@@ -53,7 +53,7 @@ POLL_INTERVAL_IN_SECONDS=5
 Run the script from the command line, specifying the Twitch username to monitor:
 
 ```
-python twitch_stream_notifier.py USERNAME
+python twitch_stream_notifier.py USERNAME --poll-interval SECONDS
 ```
 
 Replace `USERNAME` with the Twitch username you want to monitor.
@@ -61,6 +61,8 @@ Replace `USERNAME` with the Twitch username you want to monitor.
 ### Command-line Arguments
 
 - `username`: (Required) The Twitch username to monitor.
+- `--poll-interval`: (Optional)
+Time in seconds to wait before polling twitch again. Avoid using low values such as 1-2 seconds as you will get rate limited.
 
 ## Example
 
