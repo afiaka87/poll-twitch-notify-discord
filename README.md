@@ -64,14 +64,6 @@ Replace `USERNAME` with the Twitch username you want to monitor.
 - `--poll-interval`: (Optional)
 Time in seconds to wait before polling twitch again. Avoid using low values such as 1-2 seconds as you will get rate limited.
 
-## Example
-
-```
-python twitch_stream_notifier.py Ninja
-```
-
-This will start monitoring the Twitch user "Ninja" and send a Discord notification when they start streaming.
-
 ## Notes
 
 - Make sure your Discord bot has the necessary permissions to send messages in the specified channel.
