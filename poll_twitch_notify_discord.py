@@ -5,13 +5,13 @@ import requests
 import discord
 from discord import TextChannel
 import os
+from dotenv import load_dotenv
 
 # Set up logging
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
-logger = logging.getLogger("TwitchNotifier")
-from dotenv import load_dotenv
+logger = logging.getLogger("poll-twitch-notify-discord")
 
 load_dotenv()
 
